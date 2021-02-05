@@ -21,9 +21,6 @@ class Order {
   @JoinColumn({ name: 'customer_id' })
   customer: Customer;
 
-  @Column()
-  customer_id: string;
-
   @OneToMany(() => OrdersProducts, orderProduct => orderProduct.order, {
     cascade: true,
   })
